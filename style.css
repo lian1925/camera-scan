@@ -1,0 +1,58 @@
+body {
+  /* background: #aaa; */
+  font-family: Georgia, serif;
+  background-image: linear-gradient(135deg, #a8e6cf, #ffd3b6);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+}
+.bg {
+  width: 200px;
+  height: 200px;
+  background: url(images/bg.png) center center no-repeat;
+  border: 1px solid #b0f9e4;
+  position: relative;
+  overflow: hidden;
+}
+
+.pane {
+  position: absolute;
+  z-index: 10;
+  background: url(images/scan.png) center center no-repeat;
+  animation: move 1.5s ease-in-out infinite;
+  -webkit-animation: move 1.5s ease-in-out infinite;
+
+  width: 200px;
+  height: 200px;
+}
+
+-webkit-@keyframes move {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes move {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0;
+  }
+}
